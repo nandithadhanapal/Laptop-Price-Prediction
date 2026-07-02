@@ -61,8 +61,7 @@ if st.button("Predict Price"):
 
     prediction = model.predict(input_df)
 
-    
-euro_to_inr = 100  
-price_inr = prediction[0] * euro_to_inr
+    euro_to_inr = 100
+    price_inr = prediction[0] * euro_to_inr
 
-st.success(f"💰 Estimated Laptop Price: ₹ {price_inr:,.0f}")
+    st.success(f"💰 Estimated Laptop Price: ₹ {price_inr:,.0f}")
