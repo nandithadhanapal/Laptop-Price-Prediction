@@ -3,7 +3,11 @@ import pandas as pd
 import pickle
 
 # Load trained model
-model = pickle.load(open("model.pkl", "rb"))
+try:
+    model = pickle.load(open("model.pkl", "rb"))
+except Exception as e:
+    st.exception(e)
+    st.stop()
 
 st.set_page_config(page_title="Laptop Price Prediction", page_icon="💻")
 
